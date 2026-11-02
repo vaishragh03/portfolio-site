@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vaishnavi Raghavan – AI Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f5fb;--surface:#fff;--ink:#141a33;--muted:#59607e;--line:#d9ddee;--accent:#4f46e5;--warm:#e8590c;--chip:#e8eaf8;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1426;--surface:#171e38;--ink:#eceefb;--muted:#9aa2c7;--line:#2a3358;--accent:#8b9cff;--warm:#ffa94d;--chip:#222b4d}}
+:root[data-theme="dark"]{--bg:#0f1426;--surface:#171e38;--ink:#eceefb;--muted:#9aa2c7;--line:#2a3358;--accent:#8b9cff;--warm:#ffa94d;--chip:#222b4d}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "Instrument Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.1;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0;gap:16px;flex-wrap:wrap}
+nav b{font-family:"Bricolage Grotesque";font-size:20px}
+nav div{display:flex;gap:20px;align-items:center;font-size:15px}
+nav a{text-decoration:none;color:var(--muted)}nav a:hover{color:var(--ink)}
+nav button{background:none;border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:6px 12px;cursor:pointer;font:inherit;font-size:14px}
+.hero{padding:56px 0 40px;display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(40px,6vw,68px);font-weight:800;letter-spacing:-.02em}
+.hero p{color:var(--muted);max-width:46ch;margin:20px 0 28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid var(--ink)}
+.btn.p{background:var(--ink);color:var(--bg)}
+.pipe{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:22px}
+.pipe small{color:var(--muted);display:block;margin-bottom:14px}
+.stages{display:flex;flex-direction:column;gap:8px;position:relative}
+.stage{display:flex;align-items:center;gap:14px;text-align:left;background:var(--bg);border:1px solid var(--line);color:var(--ink);padding:12px 14px;border-radius:12px;cursor:pointer;font:inherit;transition:border-color .2s,transform .2s}
+.stage i{width:12px;height:12px;border-radius:50%;background:var(--line);flex:none;transition:background .3s,box-shadow .3s}
+.stage[aria-pressed="true"]{border-color:var(--accent);transform:translateX(6px)}
+.stage[aria-pressed="true"] i{background:var(--warm);box-shadow:0 0 0 6px color-mix(in srgb,var(--warm) 25%,transparent)}
+.detail{margin-top:14px;padding:14px;border-radius:12px;background:var(--chip);font-size:15px;min-height:96px}
+section{padding:56px 0}
+h2{font-size:clamp(30px,4vw,42px);margin-bottom:28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,border-color .25s}
+.card:hover{transform:translateY(-4px);border-color:var(--accent)}
+.thumb{height:150px;padding:16px;display:flex;flex-direction:column;gap:8px;justify-content:center;border-bottom:1px solid var(--line)}
+.thumb span{display:block;height:10px;border-radius:5px;background:color-mix(in srgb,var(--accent) 35%,transparent)}
+.t1{background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 18%,var(--surface)),var(--surface))}
+.t2{background:linear-gradient(135deg,color-mix(in srgb,var(--warm) 18%,var(--surface)),var(--surface))}
+.t3{background:linear-gradient(135deg,color-mix(in srgb,#10b981 18%,var(--surface)),var(--surface))}
+.t4{background:linear-gradient(135deg,color-mix(in srgb,#0ea5e9 18%,var(--surface)),var(--surface))}
+.thumb .row{display:flex;gap:8px;align-items:flex-end;height:70px}
+.thumb .row span{flex:1;background:var(--accent);opacity:.7}
+.body{padding:20px;display:flex;flex-direction:column;gap:12px;flex:1}
+.body h3{font-size:21px}
+.body p{margin:0;color:var(--muted);font-size:15px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags b{font-weight:500;font-size:13px;background:var(--chip);padding:3px 10px;border-radius:999px}
+.links{display:flex;gap:14px;margin-top:auto;padding-top:6px;font-size:15px;font-weight:600}
+.links a{color:var(--accent)}
+.lock{font-size:14px;color:var(--muted);margin-top:auto}
+.tl{border-left:2px solid var(--line);padding-left:24px;margin-left:6px}
+.tl h3{font-size:22px}.tl .m{color:var(--muted);font-size:15px;margin:4px 0 12px}
+.tl ul{margin:0;padding-left:18px;color:var(--muted)}.tl li{margin-bottom:8px}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.skills div{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px}
+.skills h3{font-size:18px;margin-bottom:10px}
+footer{padding:56px 0 72px;border-top:1px solid var(--line)}
+footer h2{margin-bottom:14px}
+footer a.big{font:700 clamp(20px,3.5vw,32px)/1.2 "Bricolage Grotesque";color:var(--accent)}
+.card{position:relative;cursor:pointer}
+.card::after{content:"";position:absolute;inset:0;border-radius:16px;pointer-events:none;opacity:0;transition:opacity .25s;background:radial-gradient(240px circle at var(--mx,50%) var(--my,50%),color-mix(in srgb,var(--accent) 22%,transparent),transparent 70%)}
+.card:hover::after{opacity:1}
+.card.dim{opacity:.3}
+.more{background:none;border:0;color:var(--ink);font:600 15px "Instrument Sans",sans-serif;padding:0;cursor:pointer;text-align:left}
+.skills b{cursor:pointer}.skills b[aria-pressed="true"]{background:var(--accent);color:var(--bg)}
+.hint{color:var(--muted);font-size:15px;margin:-14px 0 20px}
+dialog{border:1px solid var(--line);border-radius:20px;background:var(--surface);color:var(--ink);padding:0;width:min(640px,92vw);max-height:86vh;overflow:auto}
+dialog::backdrop{background:rgba(10,14,30,.6);backdrop-filter:blur(4px)}
+dialog[open]{animation:pop .25s ease}
+@keyframes pop{from{opacity:0;transform:translateY(16px) scale(.97)}to{opacity:1;transform:none}}
+.dh{padding:24px 28px 0}.dh h3{font-size:30px;margin-top:6px}.dh small{color:var(--muted)}
+.db{padding:16px 28px 28px;display:grid;gap:14px}
+.db ul{margin:0;padding-left:18px;color:var(--muted)}.db p{margin:0}
+.x{float:right;background:var(--chip);border:0;border-radius:50%;width:36px;height:36px;color:var(--ink);cursor:pointer;font-size:18px}
+@media(max-width:780px){.hero{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><b>Vaishnavi Raghavan</b><div><a href="#work">Work</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a><button id="theme" type="button">Theme</button></div></nav>
+
+<header class="hero">
+<div>
+<h1>I build AI products that work in production.</h1>
+<p>AI Engineer focused on LLM applications, RAG and MCP. I take a product from client requirements and PRD to a deployed build, with evals along the way.</p>
+<div class="btns"><a class="btn p" href="#work">See my work</a><a class="btn" href="mailto:vaishragh03@gmail.com">Email me</a></div>
+</div>
+<div class="pipe" aria-label="How I build an AI product">
+<small>How I build an AI product. Select a stage.</small>
+<div class="stages" id="stages"></div>
+<div class="detail" id="detail" aria-live="polite"></div>
+</div>
+</header>
+
+<section id="work">
+<h2>Work</h2>
+<p class="hint">Click a project for details, or click a skill further down to highlight related work.</p>
+<div class="grid">
+<article class="card"><div class="thumb t1"><span style="width:70%"></span><span style="width:90%"></span><span style="width:55%"></span></div>
+<div class="body"><h3>MCP Learning Path Generator</h3><p>Generates a learning path for a topic, built on MCP concepts and deployed as a Streamlit app.</p><div class="tags"><b>MCP</b><b>Python</b><b>Streamlit</b></div>
+<div class="links"><a href="https://mcp-lpg-25.streamlit.app/" target="_blank" rel="noopener">Live demo</a><a href="https://github.com/vaishragh03/MCP-LPG" target="_blank" rel="noopener">GitHub</a></div></div></article>
+
+<article class="card"><div class="thumb t2"><div class="row"><span style="height:40%"></span><span style="height:75%"></span><span style="height:55%"></span><span style="height:95%"></span></div></div>
+<div class="body"><h3>Lead Sniper</h3><p>An n8n workflow that spots influential GitHub developers starring a repository and alerts the team in Slack.</p><div class="tags"><b>n8n</b><b>GitHub</b><b>Slack</b></div>
+<div class="links"><a href="https://drive.google.com/file/d/1RQVkNT4o_LBl2xxfD_oumE1ewRWYg13h/view" target="_blank" rel="noopener">Demo video</a><a href="https://github.com/vaishragh03/The-Lead-Sniper-" target="_blank" rel="noopener">GitHub</a></div></div></article>
+
+<article class="card"><div class="thumb t2"><div class="row"><span style="height:60%"></span><span style="height:90%"></span><span style="height:45%"></span><span style="height:75%"></span></div></div>
+<div class="body"><h3>Fashion Store</h3><p>Full-stack MERN fashion e-commerce app with JWT authentication, product variants, personalized recommendations, cart, checkout, PDF invoices and email notifications.</p><div class="tags"><b>MongoDB</b><b>Express</b><b>React</b><b>Node.js</b><b>JWT</b></div>
+<div class="links"><a href="https://fashion-store-personalized.vercel.app/" target="_blank" rel="noopener">Live demo</a><a href="https://github.com/vaishragh03/fashion-store-personalized" target="_blank" rel="noopener">GitHub</a></div></div></article>
+
+<article class="card"><div class="thumb t3"><span style="width:85%"></span><span style="width:60%"></span><span style="width:75%"></span></div>
+<div class="body"><h3>AI-hosted interview to marketing content</h3><p>Campaign invites, an AI-hosted podcast interview, then transcripts, summaries and assessments, turned into ready-to-use marketing content.</p><div class="tags"><b>LLM pipelines</b><b>Client project</b></div>
+<p class="lock">Confidential. Walkthrough available in interview.</p></div></article>
+
+<article class="card"><div class="thumb t4"><div class="row"><span style="height:80%"></span><span style="height:50%"></span><span style="height:90%"></span><span style="height:65%"></span></div></div>
+<div class="body"><h3>Voice analytics for support calls</h3><p>Evaluates completed customer-support calls against quality criteria and builds agent scorecards that track performance over time.</p><div class="tags"><b>Voice analysis</b><b>Client project</b></div>
+<p class="lock">Confidential. Walkthrough available in interview.</p></div></article>
+</div>
+</section>
+
+<section id="experience">
+<h2>Experience</h2>
+<div class="tl"><h3>AI Engineer Intern, Tuotr EdTech</h3><div class="m">Bengaluru · July 2026 to present</div>
+<ul><li>Build end-to-end AI products with RAG pipelines, LLM workflows, MCP and prompt engineering.</li>
+<li>Lead the product cycle with mentor guidance: meet clients, capture requirements, define UX flows, write the PRD and TRD, validate them with the client, then build.</li>
+<li>Evaluate LLM output with evals while taking products from design to deployment.</li></ul></div>
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+<div class="skills">
+<div><h3>Generative AI</h3><div class="tags"><b>LLMs</b><b>RAG</b><b>MCP</b><b>Prompt engineering</b><b>Evals</b><b>LangChain</b><b>Hugging Face</b><b>n8n</b></div></div>
+<div><h3>Backend</h3><div class="tags"><b>Python</b><b>Flask</b><b>Node.js</b><b>Express</b><b>REST APIs</b><b>SQLAlchemy</b><b>SQL</b></div></div>
+<div><h3>Frontend</h3><div class="tags"><b>React</b><b>JavaScript</b><b>HTML5</b><b>CSS3</b><b>SASS</b></div></div>
+<div><h3>Product and delivery</h3><div class="tags"><b>Requirements</b><b>PRD / TRD</b><b>UX/UI planning</b><b>Client communication</b></div></div>
+<div><h3>Tools</h3><div class="tags"><b>Git</b><b>Cursor</b><b>Playwright</b><b>Selenium</b><b>Streamlit</b><b>Render</b><b>Vercel</b></div></div>
+</div>
+</section>
+
+<section>
+<h2>Education</h2>
+<div class="tl"><h3>BSc Computer Science, University of Madras</h3><div class="m">2021 to 2024</div>
+<ul><li>Presented research on chatbots and the AI revolution at a national conference.</li><li>Full-Stack Development program, Nxtwave Academy (in progress).</li></ul></div>
+</section>
+
+<footer id="contact">
+<h2>Let's talk</h2>
+<p style="color:var(--muted)">Open to full-time AI Engineer roles.</p>
+<a class="big" href="mailto:vaishragh03@gmail.com">vaishragh03@gmail.com</a>
+<div class="links" style="margin-top:18px"><a href="https://github.com/vaishragh03" target="_blank" rel="noopener">GitHub</a><a href="https://linkedin.com/in/vaishnavi-raghavan-" target="_blank" rel="noopener">LinkedIn</a></div>
+</footer>
+</div>
+
+<dialog id="dlg" aria-labelledby="dt"><div class="dh"><button class="x" id="dx" type="button" aria-label="Close">&times;</button><small id="ds"></small><h3 id="dt"></h3></div><div class="db" id="dbody"></div></dialog>
+<script>
+var S=[
+["Requirements","I meet the client, capture the use case, and write a PRD and TRD they sign off before anything is built."],
+["Retrieve","RAG pipelines pull the right context for each question, so answers rest on the client's own data."],
+["Generate","LLM workflows and carefully tuned prompts turn that context into transcripts, summaries, scorecards or content."],
+["Evaluate","Evals check output quality against defined criteria before and after each release."],
+["Deploy","The product ships as a working app, with MCP integrations and automation where they help."]];
+var box=document.getElementById("stages"),det=document.getElementById("detail"),i=0,timer;
+S.forEach(function(s,n){var b=document.createElement("button");b.type="button";b.className="stage";b.innerHTML="<i></i><span>"+s[0]+"</span>";b.onclick=function(){clearInterval(timer);pick(n)};box.appendChild(b)});
+function pick(n){i=n;[].forEach.call(box.children,function(c,k){c.setAttribute("aria-pressed",k===n)});det.textContent=S[n][1]}
+pick(0);
+if(!matchMedia("(prefers-reduced-motion:reduce)").matches){timer=setInterval(function(){pick((i+1)%S.length)},3200)}
+document.getElementById("theme").onclick=function(){var r=document.documentElement,d=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;r.dataset.theme=d?"light":"dark"};
+var P=[
+{t:"MCP Learning Path Generator",s:"Personal project",d:"A learning path generator built on MCP concepts and deployed as a Streamlit application.",h:["Built on MCP concepts","Deployed publicly on Streamlit"],l:[["Live demo","https://mcp-lpg-25.streamlit.app/"],["GitHub","https://github.com/vaishragh03/MCP-LPG"]]},
+{t:"Lead Sniper",s:"Automation project",d:"An automated n8n workflow that detects influential GitHub developers who star a repository and notifies the team on Slack.",h:["Spots influential developers starring a repo","Posts a Slack notification so the team can act on it"],l:[["Demo video","https://drive.google.com/file/d/1RQVkNT4o_LBl2xxfD_oumE1ewRWYg13h/view"],["GitHub","https://github.com/vaishragh03/The-Lead-Sniper-"]]},
+{t:"Fashion Store",s:"Full-stack project",d:"A full-stack MERN fashion e-commerce app.",h:["JWT authentication","Product variants and personalized recommendations","Cart and checkout","PDF invoices and email notifications"],l:[["Live demo","https://fashion-store-personalized.vercel.app/"],["GitHub","https://github.com/vaishragh03/fashion-store-personalized"]]},
+{t:"AI-hosted interview to marketing content",s:"Client project, confidential",d:"Built end to end as an intern. Company name, code and links are withheld, and I can walk through it in an interview.",h:["Campaign workflow: creation, email invitations, and redirecting consenting participants into a separate recording-room product","LLM pipelines that turn AI-hosted podcast interviews into transcripts, summaries and assessments","Pluggable generation of ready-to-use marketing content from transcripts and summaries"],l:[]},
+{t:"Voice analytics for support calls",s:"Client project, confidential",d:"Built as a developer on an end-to-end product. Company name, code and links are withheld, and I can walk through it in an interview.",h:["Evaluates completed support calls against defined quality criteria","Agent scorecards that track each team member's record over time, covering ticket handling and quality checks"],l:[]}];
+var dlg=document.getElementById("dlg");
+[].forEach.call(document.querySelectorAll(".card"),function(c,n){
+ var b=document.createElement("button");b.type="button";b.className="more";b.textContent="View details";c.querySelector(".body").appendChild(b);
+ c.addEventListener("mousemove",function(e){var r=c.getBoundingClientRect();c.style.setProperty("--mx",(e.clientX-r.left)+"px");c.style.setProperty("--my",(e.clientY-r.top)+"px")});
+ c.addEventListener("click",function(e){if(e.target.closest("a"))return;var p=P[n];
+  document.getElementById("ds").textContent=p.s;document.getElementById("dt").textContent=p.t;
+  var h="<p>"+p.d+"</p><ul>"+p.h.map(function(x){return"<li>"+x+"</li>"}).join("")+"</ul>";
+  if(p.l.length){h+='<div class="links">'+p.l.map(function(x){return'<a href="'+x[1]+'" target="_blank" rel="noopener">'+x[0]+'</a>'}).join("")+"</div>"}
+  document.getElementById("dbody").innerHTML=h;dlg.showModal()})});
+document.getElementById("dx").onclick=function(){dlg.close()};
+dlg.addEventListener("click",function(e){if(e.target===dlg)dlg.close()});
+var chips=document.querySelectorAll(".skills b");
+[].forEach.call(chips,function(k){k.tabIndex=0;k.setAttribute("role","button");k.setAttribute("aria-pressed","false");
+ var go=function(){var on=k.getAttribute("aria-pressed")!=="true";[].forEach.call(chips,function(o){o.setAttribute("aria-pressed","false")});k.setAttribute("aria-pressed",on);
+  var term=k.textContent.toLowerCase().replace(/s$/,""),cards=document.querySelectorAll(".card"),hits=0;
+  [].forEach.call(cards,function(c){if(on&&c.textContent.toLowerCase().indexOf(term)>-1)hits++});
+  [].forEach.call(cards,function(c){var m=c.textContent.toLowerCase().indexOf(term)>-1;c.classList.toggle("dim",on&&hits>0&&!m)});
+  if(on&&hits>0)document.getElementById("work").scrollIntoView({behavior:"smooth"})};
+ k.onclick=go;k.onkeydown=function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();go()}}});
+</script>
+</body>
+</html>
